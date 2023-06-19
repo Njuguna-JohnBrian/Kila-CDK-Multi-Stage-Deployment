@@ -11,4 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "✅✅ Here for the growth"
-      - run: chmod +x .github/scripts/checkBranch.sh && bash .github/scripts/checkBranch.sh
+      - name: Run script filee
+        run: |
+          chmod +x ../scripts/checkBranch.sh
+          ../scripts/checkBranch.sh
+        shell: bash
