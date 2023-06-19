@@ -2,9 +2,11 @@ name: Kali Stack Deploy
 
 on:
   push:
-    branches: master
+    branches:
+      - master
   pull_request:
-    branches: master
+    branches:
+      - master
 
 jobs:
   build:
@@ -17,5 +19,7 @@ jobs:
           chmod +x ${PWD}/.github/scripts/checkBranch.sh
           ${PWD}/.github/scripts/checkBranch.sh
         shell: bash
+        env:
+          CDK_BUCKET_NAME: ${{ env.CDK_BUCKET_NAME }}
       - name: Echo name
-        run: echo $CDK_BUCKET_NAME
+        run: echo ${{ env.CDK_BUCKET_NAME }}
