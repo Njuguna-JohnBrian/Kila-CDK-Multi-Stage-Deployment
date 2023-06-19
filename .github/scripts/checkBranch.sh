@@ -10,4 +10,5 @@ then
    echo "🎯🎯 Branch not found, retry"
 fi
 
+export CDK_BUCKET_NAME="John Brian"
 

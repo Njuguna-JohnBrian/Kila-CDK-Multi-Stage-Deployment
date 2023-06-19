@@ -17,3 +17,5 @@ jobs:
           chmod +x ${PWD}/.github/scripts/checkBranch.sh
           ${PWD}/.github/scripts/checkBranch.sh
         shell: bash
+      - name: Echo name
+        run: echo $CDK_BUCKET_NAME
