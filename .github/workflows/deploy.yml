@@ -13,4 +13,4 @@ jobs:
       - run: echo "✅✅ Here for the growth"
       - run: |
           chmod +x ../scripts/checkBranch.sh
-          ../scripts/checkBranch.sh
+          bash ../scripts/checkBranch.sh
