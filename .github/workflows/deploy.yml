@@ -2,11 +2,9 @@ name: Kali Stack Deploy
 
 on:
   push:
-    branches:
-      - master
+    branches: master
   pull_request:
-    branches:
-      - master
+    branches: master
 
 jobs:
   build:
@@ -15,11 +13,9 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo "✅✅ Here for the growth"
       - name: Run script file
-        id: script
         run: |
           chmod +x ${PWD}/.github/scripts/checkBranch.sh
-          OUTPUT=$(./.github/scripts/checkBranch.sh)
-          echo "::set-output name=CDK_BUCKET_NAME::$OUTPUT"
+          ${PWD}/.github/scripts/checkBranch.sh
         shell: bash
       - name: Echo name
-        run: echo ${{ steps.script.outputs.CDK_BUCKET_NAME }}
+        run: echo $stack_config
