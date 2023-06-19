@@ -18,4 +18,4 @@ jobs:
           ${PWD}/.github/scripts/checkBranch.sh
         shell: bash
       - name: Echo name
-        run: echo ${{ env.stack_config }}
+        run: echo $stack_config
