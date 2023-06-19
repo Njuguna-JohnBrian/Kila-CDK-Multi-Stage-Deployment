@@ -3,7 +3,7 @@
 
 branchName=${GITHUB_REF##*/}
 
-if [ "$branchName" == 'dev' ]
+if [ "$branchName" == 'master' ]
 then
  echo "🎯🎯 Branch name is: $branchName"
  else
