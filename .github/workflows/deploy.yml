@@ -15,11 +15,11 @@ jobs:
       - uses: actions/checkout@v2
       - run: echo "✅✅ Here for the growth"
       - name: Run script file
+        id: script
         run: |
           chmod +x ${PWD}/.github/scripts/checkBranch.sh
-          ${PWD}/.github/scripts/checkBranch.sh
+          OUTPUT=$(./.github/scripts/checkBranch.sh)
+          echo "::set-output name=CDK_BUCKET_NAME::$OUTPUT"
         shell: bash
-        env:
-          CDK_BUCKET_NAME: ${{ env.CDK_BUCKET_NAME }}
       - name: Echo name
-        run: echo ${{ env.CDK_BUCKET_NAME }}
+        run: echo ${{ steps.script.outputs.CDK_BUCKET_NAME }}
