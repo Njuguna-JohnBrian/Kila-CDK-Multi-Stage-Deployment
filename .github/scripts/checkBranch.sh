@@ -3,5 +3,11 @@
 
 branchName=${GITHUB_REF##*/}
 
-echo "🎯🎯 Branch name is: $branchName"
+if [ "$branchName" == 'dev' ]
+then
+ echo "🎯🎯 Branch name is: $branchName"
+ else
+   echo "🎯🎯 Branch not found, retry"
+fi
+
 
