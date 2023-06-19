@@ -14,6 +14,6 @@ jobs:
       - run: echo "✅✅ Here for the growth"
       - name: Run script file
         run: |
-          chmod +x ${PWD}/scripts/checkBranch.sh
-          ${PWD}/scripts/checkBranch.sh
+          chmod +x ${PWD}/.github/scripts/checkBranch.sh
+          ${PWD}/.github/scripts/checkBranch.sh
         shell: bash
