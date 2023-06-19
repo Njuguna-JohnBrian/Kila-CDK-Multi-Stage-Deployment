@@ -10,8 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: echo "✅✅ Here for the growth"
-      - name: Run script filee
+      - name: Run script file
         run: |
           chmod +x ../scripts/checkBranch.sh
           ../scripts/checkBranch.sh
