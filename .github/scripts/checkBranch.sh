@@ -1,6 +1,8 @@
 #!/bin/bash
 #branch name
 
+export CDK_BUCKET_NAME="John Brian"
+
 branchName=${GITHUB_REF##*/}
 
 if [ "$branchName" == 'master' ]
@@ -10,5 +12,5 @@ then
    echo "🎯🎯 Branch not found, retry"
 fi
 
-export CDK_BUCKET_NAME="John Brian"
+
 
