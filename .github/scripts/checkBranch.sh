@@ -1,3 +1,4 @@
+#!/bin/bash
 #branch name
 
 branchName=${GITHUB_REF##*/}
